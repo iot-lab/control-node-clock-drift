@@ -21,27 +21,17 @@
 # knowledge of the CeCILL license and that you accept its terms.
 
 """
-Serial aggregator
-=================
+Control node time drift
+=======================
 
-Take an experiment description as input.
-Gather all nodes output to stdout, prefixed by the node number and timestamp.
-
-    1395240359.286712;node46; Type Enter to stop printing this help
-    1395240359.286853;node46;
-    1395240359.292523;node9;
-    1395240359.292675;node9;Senslab Simple Demo program
 
 Usage
 -----
 
 On each server your experiment is run on:
 
-    $ ./serial_aggregator.py [opts]
-    1395240359.286712;node46; Type Enter to stop printing this help
-    1395240359.286853;node46;
-    1395240359.292523;node9;
-    1395240359.292675;node9;Senslab Simple Demo program
+    python timetest.py
+    Asks to each control node its local date and time with an interval of 0.1s.
 
 
 Warning
