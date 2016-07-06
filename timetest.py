@@ -66,8 +66,7 @@ def main(args=None):
         # Parse arguments
         nodes_list = SerialAggregator.select_nodes(opts)
         # Run the aggregator
-        with SerialAggregator(nodes_list, print_lines=True,
-                              color=opts.color) as aggregator:
+        with SerialAggregator(nodes_list, print_lines=True) as aggregator:
             while True:
                 message = 'd'
                 for node in aggregator.keys():
