@@ -26,12 +26,12 @@ def plot_nodes_time(input_fd):
         t = range(len(node_time[node][0]))
         t = np.multiply(t, len(node_time) * 0.1)
         t = np.divide(t, 60.0)
-        node_drift[node] = (float(difference[-1]) - float(difference[0])) / (t[-1] - t[0]) *600
+        node_drift[node] = (float(difference[-1]) - float(difference[0])) / (t[-1] - t[0]) * 1000000 / 60
         plt.plot(t, difference, color = np.random.rand(3,1)) 
         plt.xlabel("time (minutes)")
         plt.ylabel("Drift: tcn - timestamp (seconds)")
 
-    print "drift secondes / 10 heures \n"
+    print "drift microseconds / second \n"
     mean = 0.0
     std = 0.0
     for key in node_drift:
