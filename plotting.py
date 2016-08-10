@@ -24,7 +24,6 @@ def plot_nodes_time(input_fd):
     for node in node_time:
         difference = np.subtract(node_time[node][1],node_time[node][0])
         t = range(len(node_time[node][0]))
-        t = np.multiply(t, len(node_time) * 0.1)
         t = np.divide(t, 60.0)
         node_drift[node] = (float(difference[-1]) - float(difference[0])) / (t[-1] - t[0]) * 1000000 / 60
         plt.plot(t, difference, color = np.random.rand(3,1)) 
