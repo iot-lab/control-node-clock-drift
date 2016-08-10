@@ -190,3 +190,6 @@ sympy-plots-for-*.tex/
 # LibreOffice locks
 .~lock.*#
 
+# oml & txt
+*.oml
+*.txt
