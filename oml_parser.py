@@ -15,7 +15,7 @@ def read_timestamps(input_fd, input_csv):
         line = input_fd.readline()
         if not line: break
         timestamp, tcn = extract_timestamps_oml(line)
-        timestamp = t0 + timestamp
+        timestamp = t0 + timestamp - 1
         timestamp_final = {"tcn": tcn, "timestamp": timestamp, "node": input_csv}
         timestamps.append(timestamp_final)
     return timestamps
