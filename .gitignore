@@ -193,3 +193,4 @@ sympy-plots-for-*.tex/
 # oml & txt
 *.oml
 *.txt
+*.csv
